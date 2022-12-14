@@ -50,5 +50,7 @@ public class CarController : MonoBehaviour
     public void MoveCar (float v, float h)
     {
         inp = Vector3.Lerp(Vector3.zero, new Vector3(0, 0, v * 11.4f), 0.02f);
+        inp = transform.TransformDirection(inp);
+
     }
 }
